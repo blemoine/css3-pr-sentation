@@ -1,0 +1,215 @@
+<!DOCTYPE HTML>
+<html lang="en-US" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+	<title>CSS (3) in a nutshell</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1274, user-scalable=no">
+	<link rel="stylesheet" href="themes/ribbon/styles/style.css">
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="http://yandex.st/highlightjs/6.0/styles/sunburst.css">
+    <script src="http://yandex.st/highlightjs/6.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+	<style>
+		#Cover h2 {
+			color:#FFF;
+			text-align:center;
+			font-size:70px;
+        }
+		h2.title {
+			color:#FFF;
+			text-align:center;
+		}
+	</style>
+</head>
+<body class="list">
+	<header class="caption">
+        <h1>CSS (3) in a nutshell</h1>
+		<p>Benoît Lemoine, Alexis Kinsella, Nicolas Demengel, July 5th 2012</p>
+	</header>
+
+	<div class="slide cover" id="Cover"><div>
+		<section>
+			<header>
+                <h2>CSS (3) in a nutshell</h2>
+			</header>
+			<img src="pictures/cover.jpg" />
+		</section>
+	</div></div>
+
+    <div class="slide" id="css-purpose"><div>
+   		<section>
+   			<header>
+   				<h2>CSS</h2>
+   			</header>
+            <p>Aspect "graphique" d'un document : séparer la forme du fond</p>
+   		</section>
+   	</div></div>
+
+    <div class="slide" id="css3-syntax"><div>
+   		<section>
+   			<header>
+   				<h2>Syntaxe</h2>
+   			</header>
+            <div align="center"><img src="pictures/css-syntax.png" /></div>
+           </section>
+   	</div></div>
+
+    <div class="slide" id="css3-syntax-2"><div>
+   		<section>
+   			<header>
+   				<h2>Types de propriétés</h2>
+   			</header>
+            <ul>
+                <li>positionnement</li>
+                <li>décoration</li>
+                <li>animations</li>
+            </ul>
+           </section>
+   	</div></div>
+    
+    <div class="slide" id="box-model"><div>
+   		<section>
+   			<header>
+   				<h2>Modèle de boîte</h2>
+   			</header>
+            <div align="center"><img src="pictures/box-model.png" /></div>
+           </section>
+   	</div></div>
+    
+    <div class="slide" id="box-model-2"><div>
+   		<section>
+   			<header>
+   				<h2>Modèle de boîte</h2>
+   			</header>
+            <pre><code style="font-size: 12px;">
+    p {
+        width: 400px;
+        padding: 20px;
+        margin: 50px;
+        border: 10px solid black;
+        background-color: yellow;
+    }
+    span {
+        display: block;
+        background-color: green;
+    }
+               </code></pre>
+               <style>
+    #box-model-demo {
+        width: 400px;
+        padding: 20px;
+        margin: 10px;
+        border: 10px solid black;
+        background-color: yellow;
+    }
+    #box-model-demo span {
+        display: block;
+        background-color: green;
+    }
+               </style>
+               <div align="center">
+                    <p id="box-model-demo"><span>Blah</span></p>
+                    <p>&lt;-- 460px --&gt;</p>
+               </div>
+           </section>
+   	</div></div>
+
+    <div class="slide" id="TODO"><div>
+        <section>
+			<header>
+				<h2>TODO</h2>
+			</header>
+            <pre style="font-size: 8px;">
+Modèle de boîte :
+hauteur, largeur (min, max), padding, border, margin
+unités : px, cm, em, in, %
+mode Quircks -&gt; si ça ne se comporte pas bien, regardez devant votre DOCTYPE
+
+Display :
+block / inline -&gt; présenter les display par défaut éléments
+inline-block / (table / table-cell / table-row) 
+none et comparaison avec visbility:hidden
+
+
+Flux et positionnement :
+
+Static : cas par défaut
+Chaque élément :
+•	est situé sur le même plan que les autres éléments dans le flux ;
+•	se place le plus haut possible et le plus à gauche possible au sein de son parent ;
+•	est dépendant de l’élément frère précédent : deux éléments de type block s’empilent verticalement l’un sous l’autre, deux éléments de type inline se suivent sur la même ligne s’ils en ont la place.
+
+Relative
+Un élément positionné relativement se place par rapport à sa position classique dans le flux, puis est éventuellement décalé si au moins une des propriétés top, right, bottom ou left est renseignée.
+
+Absolute
+un élément positionné en absolu se place par rapport à son premier ancêtre positionné (position: qqchose)
+
+Fixed
+l’élé­ment fixé est toujours positionné par rapport à la partie visible de la fenêtre du navigateur
+
+Float : parler du clear. Mentionner l'existence quasi-systématique d'une alternative plus correcte. (Démo par l'image)
+
+
+
+Exercice / Demo
+
+Centrer un élement en display block / display inline horizontalement / verticalement
+Présentation en colonne : table-cell
+
+
+Mais aussi… font-* text-* background-*…
+
+
+préfixes navigateur :
+-moz-
+-webkit-
+-o-
+-ms-
+
+
+CSS 3
+
+sélecteurs avancés (y compris CSS 2.1)
+box-shadow, text-shadow, font-face (2.1), border-radius
+gradients, opacity, rgba
+media queries
+transitions (animations)
+            </pre>
+        </section>
+    </div></div>
+
+	<div class="slide" id="sources"><div>
+		<section>
+			<header>
+				<h2>Sources</h2>
+			</header>
+			<ul>
+				<li>Raphaël Goetter, <em>CSS avancées, Vers HTML5 et CSS3</em>, Eyrolles, 2011 (<a href="http://www.goetter.fr/livres/css-avancees/">le site</a>)</li>
+				<li>bar</li>
+				<li>buz</li>
+			</ul>
+		</section>
+	</div></div>
+    
+	<div class="slide" id="hands-on-time"><div>
+		<section>
+			<header>
+				<h2>Hands On!</h2>
+			</header>
+			<p>Blah</p>
+		</section>
+	</div></div>
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+	<script src="scripts/script.js"></script>
+	<!-- Copyright © 2010–2012 - Inspired from Vadim Makeev — pepelsbey.net -->
+	<!-- Photos by John Carey — fiftyfootshadows.net -->
+</body>
+</html>
