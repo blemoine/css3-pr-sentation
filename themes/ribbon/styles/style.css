@@ -39,8 +39,13 @@ BODY {
 .slide header {
 	margin:0 0 58px;
 	color:#666;
+}
+.slide header h2 {
 	font:bold 40px/1.13 'PT Sans Narrow', sans-serif;
-	}
+}
+.slide header h3 {
+	font:bold 30px/1.13 'PT Sans Narrow', sans-serif;
+}
 
 /* Elements */
 .slide p {
