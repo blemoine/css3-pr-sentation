@@ -36,6 +36,27 @@
   	 width:50px;
   	 border: 1px solid black;
    }
+   
+   	span.transition-demo {
+      		background-color: red;
+      		display:inline-block;
+		    width:50px;
+		    height:50px;
+      		border-radius: 10px;
+      		
+      		transition:all 1s ease 1s;
+      		-moz-transition:all 1s ease 1s;
+      		-wbekit-transition:all 1s ease 1s;
+     }
+      	
+     span.transition-demo:hover {
+      		background-color: blue;
+      		display:inline-block;
+		    width:50px;
+		    height:50px;
+      		border-radius: 25px;
+     }
+   
   </style>
 </head>
 <body class="list">
@@ -375,11 +396,21 @@ src: url('myFont.ttf'),
         <h3>Propriétés  - transition</h3>
       </header>
       <ul>
-      	<li></li>
+      	<li>transition : propriété durée (timing) (delay)</li>      	
       </ul>
-   
+      <pre style="font-size: 10px;">
+      	span {
+      		background-color: red; border-radius: 10px;
+      		transition:all 1s ease 1s;
+      	}
+      	span:hover {
+      		background-color: blue; border-radius: 25px;
+      	}
+      </pre>
+   		<span class="transition-demo">&nbsp;</span>
     </section>
   </div></div>
+  
   
   
   <div class="slide" id="sources"><div>
