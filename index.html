@@ -29,6 +29,13 @@
     dd {
       margin-left: 2em;
     }
+    
+   span.property-css-demo {
+  	 background-color:yellow;
+  	 display:inline-block;
+  	 width:50px;
+  	 border: 1px solid black;
+   }
   </style>
 </head>
 <body class="list">
@@ -116,6 +123,7 @@
       display: block;
       background-color: green;
   }
+  
       </style>
       <div align="center">
         <p id="box-model-demo"><span>Blah</span></p>
@@ -252,12 +260,93 @@ font-* text-* background-*…
     </section>
   </div></div>
   
-    <div class="slide" id="TODO"><div>
+    <div class="slide" id="css3-property-1"><div>
     <section>
       <header>
         <h2>CSS 3</h2>
-        <h3>TODO</h3>
+        <h3>Propriétés - box-shadow</h3>
       </header>
+      <ul>
+      	<li>box-shadow : h-pos v-pos (blur) (spread) (color) (inset)</li>
+      	<li>box-shadow : 10px 10px black;
+      		<span class="property-css-demo" style="-moz-box-shadow: 10px 10px black;-webkit-box-shadow: 10px 10px black;">&nbsp;</span>
+      	</li>
+      	<li>box-shadow : -10px -10px  5px black;
+      		<span  class="property-css-demo" style=" -moz-box-shadow: 10px 10px 5px black;-webkit-box-shadow: 10px 10px 5px black;">&nbsp;</span>
+      	</li>
+      	<li>box-shadow : -10px -10px  5px 5px black inset;
+      		<span  class="property-css-demo" style=" -moz-box-shadow: 10px 10px 5px 5px black inset;-webkit-box-shadow: 10px 10px 5px 5px black inset;">&nbsp;</span>
+      	</li>
+      	
+      </ul>
+   
+    </section>
+  </div></div>
+  
+    <div class="slide" id="css3-property-2"><div>
+    <section>
+      <header>
+        <h2>CSS 3</h2>
+        <h3>Propriétés - font-face</h3>
+      </header>
+      <ul>
+      	<li>
+      	<pre style="font-size: 90%;">
+      		@font-face {
+font-family: myFirstFont;
+src: url('myFont.ttf'),
+     url('myFont.eot'); /* IE9 */
+}
+      	</pre>
+      	</li>
+      	<li>Usage : div { font-family: myFirstFont;} </li>
+      	
+      </ul>
+   
+    </section>
+  </div></div>
+
+    <div class="slide" id="css3-property-3"><div>
+    <section>
+      <header>
+        <h2>CSS 3</h2>
+        <h3>Propriétés - text-shadow</h3>
+      </header>
+      <ul>
+      	<li>text-shadow: h-pos v-pos (blur) (color)</li>
+      	<li style="-webkit-text-shadow:  8px 8px 2px red;-moz-text-shadow:  8px 8px 2px red;text-shadow:  8px 8px 2px red;">text-shadow: 8px 8px 2px red </li>
+      	
+      </ul>
+   
+    </section>
+  </div></div>
+
+<div class="slide" id="css3-property-4"><div>
+    <section>
+      <header>
+        <h2>CSS 3</h2>
+        <h3>Propriétés  - border-radius</h3>
+      </header>
+      <ul>
+      	<li>border-radius:15px; <span  class="property-css-demo" style="border-radius:15px;-moz-border-radius:15px; -webkit-border-radius:15px">&nbsp;</span></li>
+      	<li>border-radius:25px; <span  class="property-css-demo" style="border-radius:25px;-moz-border-radius:25px; -webkit-border-radius:25px">&nbsp;</span></li>
+      	<li>border-radius:20px 5px 5px 5px; <span  class="property-css-demo" style="border-radius:20px 5px 5px 5px;-moz-border-radius:20px 5px 5px 5px; -webkit-border-radius:20px 5px 5px 5px">&nbsp;</span></li>
+      	<li>border-radius:40px 50px 50px 40px  / 10px 10px 50px 50px; <span  class="property-css-demo" style="border-radius:40px 50px 50px 40px  / 10px 10px 50px 50px;-moz-border-radius:40px 50px 50px 40px  / 10px 10px 50px 50px; -webkit-border-radius:40px 50px 50px 40px  / 10px 10px 50px 50px">&nbsp;</span></li>
+      </ul>
+   
+    </section>
+  </div></div>
+
+<div class="slide" id="css3-properties"><div>
+    <section>
+      <header>
+        <h2>CSS 3</h2>
+        <h3>Propriétés</h3>
+      </header>
+      <ul>
+      	<li>border-radius: radius{1-4}/ radisu</li>
+      	
+      </ul>
       <pre style="font-size: 10px;">
 box-shadow, text-shadow, font-face (2.1), border-radius
 gradients, opacity, rgba
