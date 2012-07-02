@@ -56,6 +56,19 @@
       border-radius: 25px;
     }
 
+    pre > code {
+      font-size: 16px;
+    }
+    
+    .demo-space {
+      margin-bottom: 20px;
+    }
+    
+    .demo-el {
+      background-color: green;
+      border: 1px solid black;
+      color: yellow;
+    }
   </style>
 </head>
 <body class="list">
@@ -118,19 +131,19 @@
       <header>
         <h2>Modèle de boîte</h2>
       </header>
-      <pre><code style="font-size: 12px;">
-  p {
-      width: 400px;
-      padding: 20px;
-      margin: 50px;
-      border: 10px solid black;
-      background-color: yellow;
-  }
-  span {
-      display: block;
-      background-color: green;
-  }
-      </code></pre>
+      <div style="margin-top: -20px; margin-bottom: 20px; display: table; width:100%;">
+        <pre style="display: table-cell; padding-right: 10px;"><code>p {
+    width: 400px;
+    padding: 20px;
+    margin: 50px;
+    border: 10px solid black;
+    background-color: yellow;
+}</code></pre>
+      <pre style="display: table-cell; padding-left: 10px;"><code>span {
+    display: block;
+    background-color: green;
+}</code></pre>
+      </div>
       <style>
   #box-model-demo {
       width: 400px;
@@ -143,7 +156,6 @@
       display: block;
       background-color: green;
   }
-  
       </style>
       <div align="center">
         <p id="box-model-demo"><span>Blah</span></p>
@@ -179,16 +191,86 @@
     <section>
       <header>
         <h2>Propriété <code>display</code></h2>
-        <h3>TODO</h3>
       </header>
-      <pre style="font-size: 10px;">
-block / inline -&gt; présenter les display par défaut des éléments
-inline-block / (table / table-cell / table-row)
-none et comparaison avec visbility:hidden
-Démo :
-Centrer un élement en display block / display inline horizontalement / verticalement
-Présentation en colonne : table-cell
-      </pre>
+      <div style="margin-top: -20px;"><code>block</code></div>
+      <div class="demo-space">
+        <span class="demo-el" style="display: block; width: 300px;">Bloc1, width: 300px;</span>
+        <span class="demo-el" style="display: block; width: 300px;">Bloc2, width: 300px;</span>
+      </div>
+      <div><code>inline</code></div>
+      <div class="demo-space">
+        <span class="demo-el" style="display: inline; width: 300px;">Bloc1, width: 300px;</span>
+        <span class="demo-el" style="display: inline; width: 300px;">Bloc2, width: 300px;</span>
+      </div>
+      <div><code>inline-block</code></div>
+      <div class="demo-space">
+        <span class="demo-el" style="display: inline-block; width: 300px;">Bloc1, width: 300px;</span>
+        <span class="demo-el" style="display: inline-block; width: 300px;">Bloc2, width: 300px;</span>
+      </div>
+    </section>
+  </div></div>
+
+  <div class="slide" id="display-2"><div>
+    <section>
+      <header>
+        <h2>Propriété <code>display</code></h2>
+        <h3><code>table-*</code></h3>
+      </header>
+      <div class="demo-space" style="margin-top: -20px; font-size: 75%;">
+        <div style="background-color: yellow; border: 1px solid black; padding: 5px;">
+          <div class="demo-el">Div 1, display: block;</div>
+          <div class="demo-el">Div 2, display: block;</div>
+        </div>
+      </div>
+      <div class="demo-space" style="font-size: 75%;">
+        <div style="background-color: yellow; border: 1px solid black; padding: 5px; display: table; width: 75%;">
+          <div style="display: table-caption;">display: table; width: 75%;</div>
+          <div class="demo-el" style="display: table-cell;">Div 1, display: table-cell;</div>
+          <div class="demo-el" style="display: table-cell;">Div 2, display: table-cell;</div>
+        </div>
+      </div>
+      <div class="demo-space" style="font-size: 75%;">
+        <div style="background-color: yellow; border: 1px solid black; padding: 5px; display: table;">
+          <div style="display: table-caption;">display: table;</div>
+          <div class="demo-el" style="display: table-cell;">Div 1, display: table-cell;</div>
+          <div class="demo-el" style="display: table-cell;">Div 2, display: table-cell;</div>
+          <div class="demo-el" style="display: table-cell;">Div 3, display: table-cell;</div>
+        </div>
+      </div>
+      <div class="demo-space" style="font-size: 75%;">
+        <div style="background-color: yellow; border: 1px solid black; padding: 5px; display: table; width: 60%;">
+          <div style="display: table-caption;">display: table; width: 60%;</div>
+          <div class="demo-el" style="display: table-row;">Div 1, display: table-row;</div>
+          <div class="demo-el" style="display: table-row;">Div 2, display: table-row;</div>
+        </div>
+      </div>
+    </section>
+  </div></div>
+
+  <div class="slide" id="display-3"><div>
+    <section>
+      <header>
+        <h2>Propriété <code>display</code></h2>
+        <h3><code>none</code></h3>
+      </header>
+      <div><code>display: block;</code></div>
+      <div class="demo-space" style="font-size: 75%;">
+        <div style="background-color: yellow; border: 1px solid black; padding: 5px;">
+          <div class="demo-el">Div, display: block;</div>
+        </div>
+      </div>
+      <div><code>display: none;</code></div>
+      <div class="demo-space" style="font-size: 75%;">
+        <div style="background-color: yellow; border: 1px solid black; padding: 5px;">
+          <div class="demo-el" style="display: none;">Div, display: none;</div>
+        </div>
+      </div>
+      <div><code>visibility: hidden;</code></div>
+      <div class="demo-space" style="font-size: 75%;">
+        <div style="background-color: yellow; border: 1px solid black; padding: 5px;">
+          <div class="demo-el" style="visibility: hidden;">Div, visibility: hidden;</div>
+        </div>
+      </div>
     </section>
   </div></div>
 
@@ -307,18 +389,13 @@ font-* text-* background-*…
         <h2>CSS 3</h2>
         <h3>Propriétés - font-face</h3>
       </header>
-      <ul>
-      	<li>
-      	<pre style="font-size: 90%;">
-@font-face {
+      <pre><code>@font-face {
     font-family: myFirstFont;
     src: url('myFont.ttf'),
     url('myFont.eot'); /* IE9 */
-}
-      	</pre>
-      	</li>
-      	<li>Usage : <code>div { font-family: myFirstFont; }</code></li>
-      </ul>
+}</code></pre>
+      <div><br />Usage :</div>
+      <pre><code>div { font-family: myFirstFont; }</code></pre>
     </section>
   </div></div>
 
@@ -384,18 +461,14 @@ font-* text-* background-*…
         <h2>CSS 3</h2>
         <h3>Propriétés  - transition</h3>
       </header>
-      <ul>
-      	<li>transition : propriété durée (timing) (delay)</li>      	
-      </ul>
-      <pre style="font-size: 10px;">
-      	span {
-      		background-color: red; border-radius: 10px;
-      		transition:all 1s ease 1s;
-      	}
-      	span:hover {
-      		background-color: blue; border-radius: 25px;
-      	}
-      </pre>
+      <div>transition : propriété durée (timing) (delay)</div>
+      <pre><code>span {
+    background-color: red; border-radius: 10px;
+    transition:all 1s ease 1s;
+}
+span:hover {
+    background-color: blue; border-radius: 25px;
+}</code></pre>
    		<span class="transition-demo">&nbsp;</span>
     </section>
   </div></div>
