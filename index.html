@@ -43,9 +43,9 @@
       width:50px;
       height:50px;
       border-radius: 10px;
-      transition:all 1s, ease 1s;
-      -moz-transition:all 1s, ease 1s;
-      -webkit-transition:all 1s, ease 1s;
+      transition:border-radius 1s ease, background-color 1s ease;
+      -moz-transition:border-radius 1s ease, background-color 1s ease;
+      -webkit-transition:border-radius 1s ease, background-color 1s ease;
     }
 
     span.transition-demo:hover {
@@ -69,6 +69,10 @@
       border: 1px solid black;
       color: yellow;
     }
+    
+    @media screen and (min-width: 200px) and (max-width: 640px) {
+		h2 {color:red}	
+	}
   </style>
 </head>
 <body class="list">
@@ -92,6 +96,9 @@
         <h2>CSS</h2>
       </header>
       <p>Aspect "graphique" d'un document : séparer la forme du fond</p>
+      <p>HTML&nbsp;: sémantique</p>
+      <p>Javascript&nbsp;: comportement</p>
+      <p>CSS&nbsp;: présentation</p>
     </section>
   </div></div>
 
@@ -182,8 +189,8 @@
         <h2>Modèle de boîte</h2>
         <h3>Mode Quircks de IE</h3>
       </header>
-      <p>TODO</p>
-      <p>-&gt; si ça ne se comporte pas bien, regardez devant votre DOCTYPE</p>
+      <p> Utilisez un DOCTYPE valide </p>
+      <p> Vérifier qu'il n'y a rien avant votre DOCTYPE (BOM Unicode, espace, etc.) 
     </section>
   </div></div>
 
@@ -335,7 +342,7 @@ font-* text-* background-*…
         <h3>Sélecteurs</h3>
       </header>
       <ul>
-      	<li>#A,  .B, C </li>
+      	<li>#A, .B, C </li>
       	<li>A > B, A + B </li>
       	<li>A:first-child </li>
       	<li>A:focus, A:hover</li>
@@ -450,6 +457,18 @@ font-* text-* background-*…
         <h2>CSS 3</h2>
         <h3>Propriétés  - media-query</h3>
       </header>
+
+            <pre><code>
+@media screen and (min-width: 200px) and (max-width: 640px) {
+	h2 {color:red}	
+}
+            </code></pre>
+        <ul>
+	        <li>screen, handheld, print</li>
+      		<li>orientation: portrait et orientation: paysage</li>
+      		<li>width, height</li>
+      		<li>device-width, device-height</li>
+      	</ul>
       <ul>
       </ul>
     </section>
@@ -462,9 +481,9 @@ font-* text-* background-*…
         <h3>Propriétés  - transition</h3>
       </header>
       <div>transition : propriété durée (timing) (delay)</div>
-      <pre><code>span {
+      <pre><code>pan {
     background-color: red; border-radius: 10px;
-    transition:all 1s ease 1s;
+    transition:all 1s ease;
 }
 span:hover {
     background-color: blue; border-radius: 25px;
