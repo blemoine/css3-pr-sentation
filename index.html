@@ -22,41 +22,40 @@
       color:#FFF;
       text-align:center;
     }
-    
+
     dt {
       font-weight: bold;
     }
     dd {
       margin-left: 2em;
     }
-    
-   span.property-css-demo {
-  	 background-color:yellow;
-  	 display:inline-block;
-  	 width:50px;
-  	 border: 1px solid black;
-   }
-   
-   	span.transition-demo {
-      		background-color: red;
-      		display:inline-block;
-		    width:50px;
-		    height:50px;
-      		border-radius: 10px;
-      		
-      		transition:all 1s ease 1s;
-      		-moz-transition:all 1s ease 1s;
-      		-wbekit-transition:all 1s ease 1s;
-     }
-      	
-     span.transition-demo:hover {
-      		background-color: blue;
-      		display:inline-block;
-		    width:50px;
-		    height:50px;
-      		border-radius: 25px;
-     }
-   
+
+    span.property-css-demo {
+      background-color:yellow;
+      display:inline-block;
+      width:50px;
+      border: 1px solid black;
+    }
+
+    span.transition-demo {
+      background-color: red;
+      display:inline-block;
+      width:50px;
+      height:50px;
+      border-radius: 10px;
+      transition:all 1s, ease 1s;
+      -moz-transition:all 1s, ease 1s;
+      -webkit-transition:all 1s, ease 1s;
+    }
+
+    span.transition-demo:hover {
+      background-color: blue;
+      display:inline-block;
+      width:50px;
+      height:50px;
+      border-radius: 25px;
+    }
+
   </style>
 </head>
 <body class="list">
@@ -263,6 +262,7 @@ font-* text-* background-*…
       
     </section>
   </div></div>
+
   <div class="slide" id="css3-selector"><div>
     <section>
       <header>
@@ -277,11 +277,10 @@ font-* text-* background-*…
       	<li>A:empty</li>
       	<li>A:not(s)</li>
       </ul>
-      
     </section>
   </div></div>
-  
-    <div class="slide" id="css3-property-1"><div>
+
+  <div class="slide" id="css3-property-1"><div>
     <section>
       <header>
         <h2>CSS 3</h2>
@@ -298,13 +297,11 @@ font-* text-* background-*…
       	<li>box-shadow : -10px -10px  5px 5px black inset;
       		<span  class="property-css-demo" style=" -moz-box-shadow: 10px 10px 5px 5px black inset;-webkit-box-shadow: 10px 10px 5px 5px black inset;">&nbsp;</span>
       	</li>
-      	
       </ul>
-   
     </section>
   </div></div>
-  
-    <div class="slide" id="css3-property-2"><div>
+
+  <div class="slide" id="css3-property-2"><div>
     <section>
       <header>
         <h2>CSS 3</h2>
@@ -313,21 +310,19 @@ font-* text-* background-*…
       <ul>
       	<li>
       	<pre style="font-size: 90%;">
-      		@font-face {
-font-family: myFirstFont;
-src: url('myFont.ttf'),
-     url('myFont.eot'); /* IE9 */
+@font-face {
+    font-family: myFirstFont;
+    src: url('myFont.ttf'),
+    url('myFont.eot'); /* IE9 */
 }
       	</pre>
       	</li>
-      	<li>Usage : div { font-family: myFirstFont;} </li>
-      	
+      	<li>Usage : <code>div { font-family: myFirstFont; }</code></li>
       </ul>
-   
     </section>
   </div></div>
 
-    <div class="slide" id="css3-property-3"><div>
+  <div class="slide" id="css3-property-3"><div>
     <section>
       <header>
         <h2>CSS 3</h2>
@@ -336,13 +331,11 @@ src: url('myFont.ttf'),
       <ul>
       	<li>text-shadow: h-pos v-pos (blur) (color)</li>
       	<li style="-webkit-text-shadow:  8px 8px 2px red;-moz-text-shadow:  8px 8px 2px red;text-shadow:  8px 8px 2px red;">text-shadow: 8px 8px 2px red </li>
-      	
       </ul>
-   
     </section>
   </div></div>
 
-<div class="slide" id="css3-property-4"><div>
+  <div class="slide" id="css3-property-4"><div>
     <section>
       <header>
         <h2>CSS 3</h2>
@@ -354,11 +347,10 @@ src: url('myFont.ttf'),
       	<li>border-radius:20px 5px 5px 5px; <span  class="property-css-demo" style="border-radius:20px 5px 5px 5px;-moz-border-radius:20px 5px 5px 5px; -webkit-border-radius:20px 5px 5px 5px">&nbsp;</span></li>
       	<li>border-radius:40px 50px 50px 40px  / 10px 10px 50px 50px; <span  class="property-css-demo" style="border-radius:40px 50px 50px 40px  / 10px 10px 50px 50px;-moz-border-radius:40px 50px 50px 40px  / 10px 10px 50px 50px; -webkit-border-radius:40px 50px 50px 40px  / 10px 10px 50px 50px">&nbsp;</span></li>
       </ul>
-   
     </section>
   </div></div>
 
-<div class="slide" id="css3-property-5"><div>
+  <div class="slide" id="css3-property-5"><div>
     <section>
       <header>
         <h2>CSS 3</h2>
@@ -366,17 +358,16 @@ src: url('myFont.ttf'),
       </header>
       <ul>
       	<li>background-image: [gradient-property]</li>
-      	<li>linear-gradient(red, blue) <span  class="property-css-demo" style="background-image:-moz-linear-gradient(red,blue);-webkit-linear-gradient(red,blue);">&nbsp;</span></li>
-      	<li>linear-gradient(60deg,red, blue) <span  class="property-css-demo" style="background-image:-moz-linear-gradient(60deg,red,blue);-webkit-linear-gradient(60deg,red,blue);">&nbsp;</span></li>
-      	<li>-repeating-linear-gradient(red, blue 10px) <span  class="property-css-demo" style="background-image:-moz-repeating-linear-gradient(red,blue 10px);-webkit-repeating-linear-gradient(red,blue 10px);">&nbsp;</span></li>
-      	<li>radial-gradient(red, blue) <span  class="property-css-demo" style="background-image:-moz-radial-gradient(red,blue);-webkit-radial-gradient(red,blue);">&nbsp;</span></li>
-      	<li>-repeating-radial-gradient(red, blue 10px) <span  class="property-css-demo" style="background-image:-moz-repeating-radial-gradient(red,blue 10px);-webkit-repeating-radial-gradient(red,blue 10px);">&nbsp;</span></li>
+      	<li>linear-gradient(red, blue) <span  class="property-css-demo" style="background-image:-moz-linear-gradient(red,blue);background-image:-webkit-linear-gradient(red,blue);">&nbsp;</span></li>
+      	<li>linear-gradient(60deg,red, blue) <span  class="property-css-demo" style="background-image:-moz-linear-gradient(60deg,red,blue);background-image:-webkit-linear-gradient(60deg,red,blue);">&nbsp;</span></li>
+      	<li>-repeating-linear-gradient(red, blue 10px) <span  class="property-css-demo" style="background-image:-moz-repeating-linear-gradient(red,blue 10px);background-image:-webkit-repeating-linear-gradient(red,blue 10px);">&nbsp;</span></li>
+      	<li>radial-gradient(red, blue) <span  class="property-css-demo" style="background-image:-moz-radial-gradient(red,blue);background-image:-webkit-radial-gradient(red,blue);">&nbsp;</span></li>
+      	<li>-repeating-radial-gradient(red, blue 10px) <span  class="property-css-demo" style="background-image:-moz-repeating-radial-gradient(red,blue 10px);background-image:-webkit-repeating-radial-gradient(red,blue 10px);">&nbsp;</span></li>
       </ul>
-   
     </section>
   </div></div>
 
-<div class="slide" id="css3-property-6"><div>
+  <div class="slide" id="css3-property-6"><div>
     <section>
       <header>
         <h2>CSS 3</h2>
@@ -384,12 +375,10 @@ src: url('myFont.ttf'),
       </header>
       <ul>
       </ul>
-   
     </section>
   </div></div>
 
-
-<div class="slide" id="css3-property-7"><div>
+  <div class="slide" id="css3-property-7"><div>
     <section>
       <header>
         <h2>CSS 3</h2>
