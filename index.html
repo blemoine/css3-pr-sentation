@@ -29,6 +29,10 @@
     dd {
       margin-left: 2em;
     }
+    
+    #position-1 li {
+    	font-size:95%;
+    }
 
     span.property-css-demo {
       background-color:yellow;
@@ -285,26 +289,144 @@
     <section>
       <header>
         <h2>Flux et positionnement</h2>
-        <h3>TODO</h3>
+        <h3>Position par défaut - static</h3>
       </header>
-      <pre style="font-size: 10px;">
-Static : cas par défaut
-Chaque élément :
-•  est situé sur le même plan que les autres éléments dans le flux ;
-•  se place le plus haut possible et le plus à gauche possible au sein de son parent ;
-•  est dépendant de l’élément frère précédent : deux éléments de type block s’empilent verticalement l’un sous l’autre, deux éléments de type inline se suivent sur la même ligne s’ils en ont la place.
+      	<ul>
+      		<li>situé sur le même plan que les autres éléments dans le flux ;</li>
+      		<li>se place le plus haut possible et le plus à gauche possible au sein de son parent ;</li>
+      		<li>est dépendant de l’élément frère précédent&nbsp;: 
+      			<ul>
+      				<li>deux éléments de type block s’empilent verticalement l’un sous l’autre</li>
+      				<li>deux éléments de type inline se suivent sur la même ligne s’ils en ont la place</li>
+      			</ul>
+      		</li>
+      	</ul>
 
-Relative
-Un élément positionné relativement se place par rapport à sa position classique dans le flux, puis est éventuellement décalé si au moins une des propriétés top, right, bottom ou left est renseignée.
+    </section>
+  </div></div>
+  
+  <div class="slide" id="position-2"><div>
+    <section>
+      <header>
+        <h2>Flux et positionnement</h2>
+        <h3>Position relative - Position absolu</h3>
+      </header>
+      	<div style="border-bottom:1px solid black">
+			<pre><code>position: relative;</code></pre>
+			<p>placé de façon classique dans le flux, puis éventuellement décalé avec une des propriétés top, right, bottom ou left.</p>
+		</div>
+		<div style="margin-top:10px">
+			<pre><code>position: absolute;</code></pre>
+			<p> placé par rapport à son premier ancêtre positionné (position != static)</p>
+		</div>
+  
+    </section>
+  </div></div>
+  
+  <div class="slide" id="position-3"><div>
+    <section>
+      <header>
+        <h2>Flux et positionnement</h2>
+        <h3>Position relative - Position fixed</h3>
+      </header>
+      <div style="border-bottom:1px solid black">
+      	<pre><code>position: fixed;</code></pre>
+      	<p>toujours positionné par rapport à la partie visible de la fenêtre du navigateur</p>
+      </div>
+    </section>
+  </div></div>
+  
+  <div class="slide" id="position-4"><div>
+    <section>
+      <header>
+        <h2>Flux et positionnement</h2>
+        <h3>Position relative - float</h3>
+      </header>
 
-Absolute
-un élément positionné en absolu se place par rapport à son premier ancêtre positionné (position: qqchose)
+      	<pre><code>float: left; ou float:right; </code></pre>
+      	
+      	<pre><code>
+&lt;div style="background-color:red; padding: 10px;"&gt;
+  &lt;div style="background-color:green;float:left;"&gt;Premier Flottant&lt;/div&gt;
+  &lt;div style="background-color:yellow;float:left;"&gt;2eme Flottant&lt;/div&gt; 		
+&lt;/div&gt;</code></pre>
+      	
+      	<div style="background-color:red; padding: 10px;">
+      		<div style="background-color:green;float:left;">Premier Flottant</div>
+      		<div style="background-color:yellow;float:left;">2eme Flottant</div>      		
+      	</div>
 
-Fixed
-l’élé­ment fixé est toujours positionné par rapport à la partie visible de la fenêtre du navigateur
+    </section>
+  </div></div>
+  
+  <div class="slide" id="position-5"><div>
+    <section>
+      <header>
+        <h2>Flux et positionnement</h2>
+        <h3>Position relative - float ajout dans le flux</h3>
+      </header>
+      	
+      	<pre><code>
+&lt;div style="background-color:red; padding: 10px;"&gt;
+  &lt;div style="background-color:green;float:left;"&gt;Premier Flottant&lt;/div&gt;
+  &lt;div style="background-color:yellow;"&gt;Non Flottant 
+  		et extrêmement long de façon à passer à la ligne &lt;/div&gt; 		
+&lt;/div&gt;</code></pre>
+      	
+      	<div style="background-color:red; padding: 10px;">
+      		<div style="background-color:green;float:left;">Premier Flottant</div>
+      		<div style="background-color:yellow;">Non Flottant 
+      			et extrêmement long de façon à passer à la ligne </div>      		
+      	</div>
 
-Float : parler du clear. Mentionner l'existence quasi-systématique d'une alternative plus correcte. (Démo par l'image)
-      </pre>
+    </section>
+  </div></div>
+  
+    <div class="slide" id="position-6"><div>
+    <section>
+      <header>
+        <h2>Flux et positionnement</h2>
+        <h3>Position relative - float</h3>
+      </header>
+
+      	<pre><code>&lt;div style="background-color:red; padding: 10px;"&gt;
+  &lt;div style="background-color:green;float:left;"&gt;Premier Flottant&lt;/div&gt;
+  &lt;div style="clear:both" &gt;&lt;/div&gt;
+   &lt;div style="background-color:yellow;"&gt;Non Flottant 
+  		et extrêmement long de façon à passer à la ligne &lt;/div&gt;   
+&lt;/div&gt;</code></pre>
+      	
+      	<div style="background-color:red; padding: 10px;">
+      		<div style="background-color:green;float:left;">Premier Flottant</div>
+      		<div style="clear:both"></div>
+      		<div style="background-color:yellow;">Non Flottant 
+      			et extrêmement long de façon à passer à la ligne </div>       		
+      		
+      	</div>
+
+    </section>
+  </div></div>
+  
+   <div class="slide" id="position-7"><div>
+    <section>
+      <header>
+        <h2>Flux et positionnement</h2>
+        <h3>Position relative - inline-block</h3>
+      </header>
+
+      	<pre><code>&lt;div style="background-color:red; padding: 10px;"&gt;
+  &lt;div style="background-color:green;display:inline-block;"&gt;Premier Flottant&lt;/div&gt;
+   &lt;div style="background-color:yellow;"&gt;Non Flottant 
+  		et extrêmement long de façon à passer à la ligne &lt;/div&gt;   
+&lt;/div&gt;</code></pre>
+      	
+      	<div style="background-color:red; padding: 10px;">
+      		<div style="background-color:green;display:inline-block;">Premier Flottant</div>
+      		<div style="background-color:yellow;">Non Flottant 
+      			et extrêmement long de façon à passer à la ligne </div>       		
+      		
+      	</div>
+
     </section>
   </div></div>
 
